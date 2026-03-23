@@ -6,20 +6,6 @@ email lumm123123123@gmail.com
 
 genome hg38
 
-############################
-# COMMON SETTINGS TEMPLATE #
-############################
-
-# All tracks:
-# autoScale off
-# viewLimits -5:10
-# alwaysZero on
-# maxHeightPixels 100:60:20
-
-############################
-# TRACKS
-############################
-
 track CD8TCells_PW_minus
 bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213549d6d8b649d7f2ca/display?to_ext=bigwig
 type bigWig
@@ -27,7 +13,7 @@ shortLabel CD8 PW -
 longLabel CD8TCells PW mean by donor minus
 visibility full
 autoScale off
-viewLimits -5:5
+viewLimits -5:10
 alwaysZero on
 maxHeightPixels 100:60:20
 
@@ -38,7 +24,7 @@ shortLabel CD8 PW +
 longLabel CD8TCells PW mean by donor plus
 visibility full
 autoScale off
-viewLimits -5:5
+viewLimits -5:10
 alwaysZero on
 maxHeightPixels 100:60:20
 
@@ -49,7 +35,7 @@ shortLabel CD8 APC -
 longLabel CD8TCells APC avg cell minus
 visibility full
 autoScale off
-viewLimits -5:5
+viewLimits -5:10
 alwaysZero on
 maxHeightPixels 100:60:20
 
@@ -60,7 +46,7 @@ shortLabel CD8 APC +
 longLabel CD8TCells APC avg cell plus
 visibility full
 autoScale off
-viewLimits -5:5
+viewLimits -5:10
 alwaysZero on
 maxHeightPixels 100:60:20
 
@@ -71,7 +57,7 @@ shortLabel Mono PW -
 longLabel Monocytes PW mean by donor minus
 visibility full
 autoScale off
-viewLimits -5:5
+viewLimits -5:10
 alwaysZero on
 maxHeightPixels 100:60:20
 
@@ -82,7 +68,7 @@ shortLabel Mono PW +
 longLabel Monocytes PW mean by donor plus
 visibility full
 autoScale off
-viewLimits -5:5
+viewLimits -5:10
 alwaysZero on
 maxHeightPixels 100:60:20
 
@@ -93,7 +79,7 @@ shortLabel Mono APC -
 longLabel Monocytes APC avg cell minus
 visibility full
 autoScale off
-viewLimits -5:5
+viewLimits -5:10
 alwaysZero on
 maxHeightPixels 100:60:20
 
@@ -104,7 +90,7 @@ shortLabel Mono APC +
 longLabel Monocytes APC avg cell plus
 visibility full
 autoScale off
-viewLimits -5:5
+viewLimits -5:10
 alwaysZero on
 maxHeightPixels 100:60:20
 
@@ -115,7 +101,7 @@ shortLabel Astro PW -
 longLabel Astrocytes PW mean by donor minus
 visibility full
 autoScale off
-viewLimits -5:5
+viewLimits -5:10
 alwaysZero on
 maxHeightPixels 100:60:20
 
@@ -126,7 +112,7 @@ shortLabel Astro PW +
 longLabel Astrocytes PW mean by donor plus
 visibility full
 autoScale off
-viewLimits -5:5
+viewLimits -5:10
 alwaysZero on
 maxHeightPixels 100:60:20
 
@@ -137,7 +123,7 @@ shortLabel Astro APC -
 longLabel Astrocytes APC avg cell minus
 visibility full
 autoScale off
-viewLimits -5:5
+viewLimits -5:10
 alwaysZero on
 maxHeightPixels 100:60:20
 
@@ -148,8 +134,6 @@ shortLabel Astro APC +
 longLabel Astrocytes APC avg cell plus
 visibility full
 autoScale off
-viewLimits -5:5
+viewLimits -5:10
 alwaysZero on
 maxHeightPixels 100:60:20
-
-# (Continue same pattern for remaining tracks…)
