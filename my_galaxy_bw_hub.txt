@@ -13,3 +13,316 @@ shortLabel CD8TCells.RNAseq.PW.mean_by_donor.minus.bw
 longLabel CD8TCells.RNAseq.PW.mean_by_donor.minus.bw
 visibility full
 autoScale on
+
+track Monocytes_RNAseq_APC_avg_cell_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fb3db6bbe3c8f75f/display?to_ext=bigwig
+type bigWig
+shortLabel Monocytes.RNAseq.APC.avg_cell.minus.bw
+longLabel Monocytes.RNAseq.APC.avg_cell.minus.bw
+visibility full
+autoScale on
+
+track OPCs_RNAseq_PW_mean_by_donor_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721357bdfd6866e1c3f27/display?to_ext=bigwig
+type bigWig
+shortLabel OPCs.RNAseq.PW.mean_by_donor.minus.bw
+longLabel OPCs.RNAseq.PW.mean_by_donor.minus.bw
+visibility full
+autoScale on
+
+track Endothelialcell_RNAseq_APC_avg_cell_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721357c5a9754fa86fe49/display?to_ext=bigwig
+type bigWig
+shortLabel Endothelialcell.RNAseq.APC.avg_cell.minus.bw
+longLabel Endothelialcell.RNAseq.APC.avg_cell.minus.bw
+visibility full
+autoScale on
+
+track CD8TCells_RNAseq_APC_avg_cell_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721353df76dcce036047d/display?to_ext=bigwig
+type bigWig
+shortLabel CD8TCells.RNAseq.APC.avg_cell.minus.bw
+longLabel CD8TCells.RNAseq.APC.avg_cell.minus.bw
+visibility full
+autoScale on
+
+track Pericytes_RNAseq_PW_mean_by_donor_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721350e08fb3f75ff0978/display?to_ext=bigwig
+type bigWig
+shortLabel Pericytes.RNAseq.PW.mean_by_donor.plus.bw
+longLabel Pericytes.RNAseq.PW.mean_by_donor.plus.bw
+visibility full
+autoScale on
+
+track Pericytes_RNAseq_PW_mean_by_donor_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721354f60a872274adbe1/display?to_ext=bigwig
+type bigWig
+shortLabel Pericytes.RNAseq.PW.mean_by_donor.minus.bw
+longLabel Pericytes.RNAseq.PW.mean_by_donor.minus.bw
+visibility full
+autoScale on
+
+track GABAneurons_RNAseq_PW_mean_by_donor_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721358701d34b6a557b29/display?to_ext=bigwig
+type bigWig
+shortLabel GABAneurons.RNAseq.PW.mean_by_donor.minus.bw
+longLabel GABAneurons.RNAseq.PW.mean_by_donor.minus.bw
+visibility full
+autoScale on
+
+track Pericytes_RNAseq_APC_avg_cell_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213532c32c5c7d8504d0/display?to_ext=bigwig
+type bigWig
+shortLabel Pericytes.RNAseq.APC.avg_cell.minus.bw
+longLabel Pericytes.RNAseq.APC.avg_cell.minus.bw
+visibility full
+autoScale on
+
+track OPCs_RNAseq_APC_avg_cell_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135d55297fca444a2b2/display?to_ext=bigwig
+type bigWig
+shortLabel OPCs.RNAseq.APC.avg_cell.minus.bw
+longLabel OPCs.RNAseq.APC.avg_cell.minus.bw
+visibility full
+autoScale on
+
+track Astrocytes_RNAseq_APC_avg_cell_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213540ac72631581338f/display?to_ext=bigwig
+type bigWig
+shortLabel Astrocytes.RNAseq.APC.avg_cell.minus.bw
+longLabel Astrocytes.RNAseq.APC.avg_cell.minus.bw
+visibility full
+autoScale on
+
+track Endothelialcell_RNAseq_PW_mean_by_donor_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fa868e3dcc480899/display?to_ext=bigwig
+type bigWig
+shortLabel Endothelialcell.RNAseq.PW.mean_by_donor.minus.bw
+longLabel Endothelialcell.RNAseq.PW.mean_by_donor.minus.bw
+visibility full
+autoScale on
+
+track OPCs_RNAseq_PW_mean_by_donor_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135f7ca4e326386e7a6/display?to_ext=bigwig
+type bigWig
+shortLabel OPCs.RNAseq.PW.mean_by_donor.plus.bw
+longLabel OPCs.RNAseq.PW.mean_by_donor.plus.bw
+visibility full
+autoScale on
+
+track Pericytes_RNAseq_APC_avg_cell_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fe7dd23075091a2d/display?to_ext=bigwig
+type bigWig
+shortLabel Pericytes.RNAseq.APC.avg_cell.plus.bw
+longLabel Pericytes.RNAseq.APC.avg_cell.plus.bw
+visibility full
+autoScale on
+
+track Gluneurons_RNAseq_PW_mean_by_donor_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135a15c450fa8ae18b3/display?to_ext=bigwig
+type bigWig
+shortLabel Gluneurons.RNAseq.PW.mean_by_donor.minus.bw
+longLabel Gluneurons.RNAseq.PW.mean_by_donor.minus.bw
+visibility full
+autoScale on
+
+track CD8TCells_RNAseq_APC_avg_cell_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721356ec3b7d1d431be95/display?to_ext=bigwig
+type bigWig
+shortLabel CD8TCells.RNAseq.APC.avg_cell.plus.bw
+longLabel CD8TCells.RNAseq.APC.avg_cell.plus.bw
+visibility full
+autoScale on
+
+track Monocytes_RNAseq_APC_avg_cell_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213540a31de73838bfae/display?to_ext=bigwig
+type bigWig
+shortLabel Monocytes.RNAseq.APC.avg_cell.plus.bw
+longLabel Monocytes.RNAseq.APC.avg_cell.plus.bw
+visibility full
+autoScale on
+
+track Oligodendrocytes_RNAseq_APC_avg_cell_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fd2f73fbf43d6879/display?to_ext=bigwig
+type bigWig
+shortLabel Oligodendrocytes.RNAseq.APC.avg_cell.minus.bw
+longLabel Oligodendrocytes.RNAseq.APC.avg_cell.minus.bw
+visibility full
+autoScale on
+
+track Microglia_RNAseq_PW_mean_by_donor_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721354f2d625734662d4d/display?to_ext=bigwig
+type bigWig
+shortLabel Microglia.RNAseq.PW.mean_by_donor.plus.bw
+longLabel Microglia.RNAseq.PW.mean_by_donor.plus.bw
+visibility full
+autoScale on
+
+track GABAneurons_RNAseq_APC_avg_cell_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213587a6ba0fc18398aa/display?to_ext=bigwig
+type bigWig
+shortLabel GABAneurons.RNAseq.APC.avg_cell.minus.bw
+longLabel GABAneurons.RNAseq.APC.avg_cell.minus.bw
+visibility full
+autoScale on
+
+track Endothelialcell_RNAseq_APC_avg_cell_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fa80d17ebc253235/display?to_ext=bigwig
+type bigWig
+shortLabel Endothelialcell.RNAseq.APC.avg_cell.plus.bw
+longLabel Endothelialcell.RNAseq.APC.avg_cell.plus.bw
+visibility full
+autoScale on
+
+track Microglia_RNAseq_APC_avg_cell_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135afb0bb06cb6c7a7e/display?to_ext=bigwig
+type bigWig
+shortLabel Microglia.RNAseq.APC.avg_cell.plus.bw
+longLabel Microglia.RNAseq.APC.avg_cell.plus.bw
+visibility full
+autoScale on
+
+track GABAneurons_RNAseq_PW_mean_by_donor_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721352c77ecea3b2663cc/display?to_ext=bigwig
+type bigWig
+shortLabel GABAneurons.RNAseq.PW.mean_by_donor.plus.bw
+longLabel GABAneurons.RNAseq.PW.mean_by_donor.plus.bw
+visibility full
+autoScale on
+
+track Microglia_RNAseq_APC_avg_cell_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213582551282a750590d/display?to_ext=bigwig
+type bigWig
+shortLabel Microglia.RNAseq.APC.avg_cell.minus.bw
+longLabel Microglia.RNAseq.APC.avg_cell.minus.bw
+visibility full
+autoScale on
+
+track Gluneurons_RNAseq_APC_avg_cell_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721359b7626e9fc98b319/display?to_ext=bigwig
+type bigWig
+shortLabel Gluneurons.RNAseq.APC.avg_cell.minus.bw
+longLabel Gluneurons.RNAseq.APC.avg_cell.minus.bw
+visibility full
+autoScale on
+
+track Gluneurons_RNAseq_PW_mean_by_donor_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213564eec7dfa98cae0e/display?to_ext=bigwig
+type bigWig
+shortLabel Gluneurons.RNAseq.PW.mean_by_donor.plus.bw
+longLabel Gluneurons.RNAseq.PW.mean_by_donor.plus.bw
+visibility full
+autoScale on
+
+track Oligodendrocytes_RNAseq_APC_avg_cell_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213598f5cbd5ffe65375/display?to_ext=bigwig
+type bigWig
+shortLabel Oligodendrocytes.RNAseq.APC.avg_cell.plus.bw
+longLabel Oligodendrocytes.RNAseq.APC.avg_cell.plus.bw
+visibility full
+autoScale on
+
+track Monocytes_RNAseq_PW_mean_by_donor_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213549e7cd0145517016/display?to_ext=bigwig
+type bigWig
+shortLabel Monocytes.RNAseq.PW.mean_by_donor.plus.bw
+longLabel Monocytes.RNAseq.PW.mean_by_donor.plus.bw
+visibility full
+autoScale on
+
+track Astrocytes_RNAseq_PW_mean_by_donor_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135e5f30c8b6e5a4e15/display?to_ext=bigwig
+type bigWig
+shortLabel Astrocytes.RNAseq.PW.mean_by_donor.plus.bw
+longLabel Astrocytes.RNAseq.PW.mean_by_donor.plus.bw
+visibility full
+autoScale on
+
+track OPCs_RNAseq_APC_avg_cell_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213594a07b7367d740db/display?to_ext=bigwig
+type bigWig
+shortLabel OPCs.RNAseq.APC.avg_cell.plus.bw
+longLabel OPCs.RNAseq.APC.avg_cell.plus.bw
+visibility full
+autoScale on
+
+track Microglia_RNAseq_PW_mean_by_donor_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135df6556005f621ea2/display?to_ext=bigwig
+type bigWig
+shortLabel Microglia.RNAseq.PW.mean_by_donor.minus.bw
+longLabel Microglia.RNAseq.PW.mean_by_donor.minus.bw
+visibility full
+autoScale on
+
+track Monocytes_RNAseq_PW_mean_by_donor_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135a738740a760b3a97/display?to_ext=bigwig
+type bigWig
+shortLabel Monocytes.RNAseq.PW.mean_by_donor.minus.bw
+longLabel Monocytes.RNAseq.PW.mean_by_donor.minus.bw
+visibility full
+autoScale on
+
+track Astrocytes_RNAseq_APC_avg_cell_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721357b466dd2ecc1c6ff/display?to_ext=bigwig
+type bigWig
+shortLabel Astrocytes.RNAseq.APC.avg_cell.plus.bw
+longLabel Astrocytes.RNAseq.APC.avg_cell.plus.bw
+visibility full
+autoScale on
+
+track CD8TCells_RNAseq_PW_mean_by_donor_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721355206225b37a8e0a6/display?to_ext=bigwig
+type bigWig
+shortLabel CD8TCells.RNAseq.PW.mean_by_donor.plus.bw
+longLabel CD8TCells.RNAseq.PW.mean_by_donor.plus.bw
+visibility full
+autoScale on
+
+track Oligodendrocytes_RNAseq_PW_mean_by_donor_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135dff61178d479a2bd/display?to_ext=bigwig
+type bigWig
+shortLabel Oligodendrocytes.RNAseq.PW.mean_by_donor.plus.bw
+longLabel Oligodendrocytes.RNAseq.PW.mean_by_donor.plus.bw
+visibility full
+autoScale on
+
+track Astrocytes_RNAseq_PW_mean_by_donor_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135ea455ac3027da576/display?to_ext=bigwig
+type bigWig
+shortLabel Astrocytes.RNAseq.PW.mean_by_donor.minus.bw
+longLabel Astrocytes.RNAseq.PW.mean_by_donor.minus.bw
+visibility full
+autoScale on
+
+track Gluneurons_RNAseq_APC_avg_cell_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135acb74d35d8a956ff/display?to_ext=bigwig
+type bigWig
+shortLabel Gluneurons.RNAseq.APC.avg_cell.plus.bw
+longLabel Gluneurons.RNAseq.APC.avg_cell.plus.bw
+visibility full
+autoScale on
+
+track Oligodendrocytes_RNAseq_PW_mean_by_donor_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135614da76de49fe6d3/display?to_ext=bigwig
+type bigWig
+shortLabel Oligodendrocytes.RNAseq.PW.mean_by_donor.minus.bw
+longLabel Oligodendrocytes.RNAseq.PW.mean_by_donor.minus.bw
+visibility full
+autoScale on
+
+track GABAneurons_RNAseq_APC_avg_cell_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135b3d78d778e9d1e9a/display?to_ext=bigwig
+type bigWig
+shortLabel GABAneurons.RNAseq.APC.avg_cell.plus.bw
+longLabel GABAneurons.RNAseq.APC.avg_cell.plus.bw
+visibility full
+autoScale on
+
+track Endothelialcell_RNAseq_PW_mean_by_donor_plus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135bb7a2443905f0cc6/display?to_ext=bigwig
+type bigWig
+shortLabel Endothelialcell.RNAseq.PW.mean_by_donor.plus.bw
+longLabel Endothelialcell.RNAseq.PW.mean_by_donor.plus.bw
+visibility full
+autoScale on
+
