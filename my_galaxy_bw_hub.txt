@@ -1,0 +1,15 @@
+hub my_galaxy_bw_hub
+shortLabel Galaxy RNA BW Hub(APC_PW)
+longLabel BigWig track hub for ASAP midbrain RNAseq(APC_PW) hosted on Galaxy
+useOneFile on
+email lumm123123123@gmail.com
+
+genome hg38
+
+track CD8TCells_RNAseq_PW_mean_by_donor_minus_bw
+bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213549d6d8b649d7f2ca/display?to_ext=bigwig
+type bigWig
+shortLabel CD8TCells.RNAseq.PW.mean_by_donor.minus.bw
+longLabel CD8TCells.RNAseq.PW.mean_by_donor.minus.bw
+visibility full
+autoScale on
