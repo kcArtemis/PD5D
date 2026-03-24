@@ -19,7 +19,6 @@ subGroup2 cell CellType Astro=Astro CD8=CD8 DA=DA Endo=Endo GABA=GABA Glu=Glu Mi
 subGroup3 src Source APC=APC PW=PW
 subGroup4 strand Strand plus=Plus minus=Minus none=None
 dimensions dimX=view dimY=cell dimA=src dimB=strand
-sortOrder view=+ cell=+ src=+ strand=+
 maxHeightPixels 60:60:60
 
     track RNA_view
