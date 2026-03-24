@@ -39,7 +39,7 @@ maxHeightPixels 60:60:60
         subGroups view=RNA cell=Astro src=APC strand=plus
         color 230,159,0
         visibility full
-        autoScale group
+        autoScale on
         graphTypeDefault bar
         maxHeightPixels 60:60:60
         windowingFunction mean+whiskers
@@ -58,7 +58,7 @@ maxHeightPixels 60:60:60
         color 230,159,0
         visibility full
         negateValues on
-        autoScale group
+        autoScale on
         graphTypeDefault bar
         maxHeightPixels 60:60:60
         windowingFunction mean+whiskers
