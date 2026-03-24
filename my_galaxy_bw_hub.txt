@@ -7,915 +7,904 @@ email lumm123123123@gmail.com
 genome hg38
 
 track APC_PW_multiome
-compositeTrack on
+superTrack on
 shortLabel APC_PW Multiome
 longLabel ASAP midbrain RNA and ATAC tracks organized by assay, cell type, and source
+
+########################################
+# RNA COMPOSITE
+########################################
+
+track APC_PW_RNA
+parent APC_PW_multiome
+compositeTrack on
+shortLabel RNA
+longLabel RNA-seq stranded signal tracks
 type bigWig
 visibility full
 allButtonPair on
 dragAndDrop subTracks
-subGroup1 view Assay RNA=RNA ATAC=ATAC
-subGroup2 cell CellType Astro=Astro CD8=CD8 DA=DA Endo=Endo GABA=GABA Glu=Glu Micro=Micro Mono=Monocytes Oligo=Oligo OPC=OPC Peri=Pericytes
-subGroup3 src Source APC=APC PW=PW
-dimensions dimX=view dimY=cell dimA=src
-sortOrder view=+ cell=+ src=+
-autoScale on
+subGroup1 cell CellType Astro=Astro CD8=CD8 Endo=Endo GABA=GABA Glu=Glu Micro=Micro Mono=Monocytes Oligo=Oligo OPC=OPC Peri=Pericytes
+subGroup2 src Source APC=APC PW=PW
+dimensions dimX=cell dimY=src
+sortOrder cell=+ src=+
 maxHeightPixels 100:60:20
 
-    track RNA_view
-    parent APC_PW_multiome
-    shortLabel RNA
-    longLabel RNA-seq stranded signal tracks
-    view RNA
+    track Astrocytes_RNAseq_APC_avg_cell_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Astro APC RNA
+    longLabel Astrocytes RNAseq APC avg_cell stranded
     type bigWig
-    visibility dense
-    subGroups view=RNA
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Astro src=APC
 
-        track Astrocytes_RNAseq_APC_avg_cell_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Astro APC RNA
-        longLabel Astrocytes RNAseq APC avg_cell stranded
+        track Astrocytes_RNAseq_APC_avg_cell_plus_bw
+        parent Astrocytes_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721357b466dd2ecc1c6ff/display?to_ext=bigwig
         type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Astro src=APC
+        shortLabel Astro APC +
+        longLabel Astrocytes RNAseq APC avg_cell plus
+        color 230,159,0
 
-            track Astrocytes_RNAseq_APC_avg_cell_plus_bw
-            parent Astrocytes_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721357b466dd2ecc1c6ff/display?to_ext=bigwig
-            type bigWig
-            shortLabel Astro APC +
-            longLabel Astrocytes RNAseq APC avg_cell plus
-            color 230,159,0
-            autoScale on
-
-            track Astrocytes_RNAseq_APC_avg_cell_minus_bw
-            parent Astrocytes_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213540ac72631581338f/display?to_ext=bigwig
-            type bigWig
-            shortLabel Astro APC -
-            longLabel Astrocytes RNAseq APC avg_cell minus
-            color 230,159,0
-            negateValues on
-            autoScale on
-
-        track Astrocytes_RNAseq_PW_mean_by_donor_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Astro PW RNA
-        longLabel Astrocytes RNAseq PW mean_by_donor stranded
+        track Astrocytes_RNAseq_APC_avg_cell_minus_bw
+        parent Astrocytes_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213540ac72631581338f/display?to_ext=bigwig
         type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Astro src=PW
+        shortLabel Astro APC -
+        longLabel Astrocytes RNAseq APC avg_cell minus
+        color 230,159,0
+        negateValues on
 
-            track Astrocytes_RNAseq_PW_mean_by_donor_plus_bw
-            parent Astrocytes_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135e5f30c8b6e5a4e15/display?to_ext=bigwig
-            type bigWig
-            shortLabel Astro PW +
-            longLabel Astrocytes RNAseq PW mean_by_donor plus
-            color 230,159,0
-            autoScale on
-
-            track Astrocytes_RNAseq_PW_mean_by_donor_minus_bw
-            parent Astrocytes_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135ea455ac3027da576/display?to_ext=bigwig
-            type bigWig
-            shortLabel Astro PW -
-            longLabel Astrocytes RNAseq PW mean_by_donor minus
-            color 230,159,0
-            negateValues on
-            autoScale on
-
-        track CD8TCells_RNAseq_APC_avg_cell_bw
-        parent RNA_view
-        container multiWig
-        shortLabel CD8 APC RNA
-        longLabel CD8TCells RNAseq APC avg_cell stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=CD8 src=APC
-
-            track CD8TCells_RNAseq_APC_avg_cell_plus_bw
-            parent CD8TCells_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721356ec3b7d1d431be95/display?to_ext=bigwig
-            type bigWig
-            shortLabel CD8 APC +
-            longLabel CD8TCells RNAseq APC avg_cell plus
-            color 86,180,233
-            autoScale on
-
-            track CD8TCells_RNAseq_APC_avg_cell_minus_bw
-            parent CD8TCells_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721353df76dcce036047d/display?to_ext=bigwig
-            type bigWig
-            shortLabel CD8 APC -
-            longLabel CD8TCells RNAseq APC avg_cell minus
-            color 86,180,233
-            negateValues on
-            autoScale on
-
-        track CD8TCells_RNAseq_PW_mean_by_donor_bw
-        parent RNA_view
-        container multiWig
-        shortLabel CD8 PW RNA
-        longLabel CD8TCells RNAseq PW mean_by_donor stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=CD8 src=PW
-
-            track CD8TCells_RNAseq_PW_mean_by_donor_plus_bw
-            parent CD8TCells_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721355206225b37a8e0a6/display?to_ext=bigwig
-            type bigWig
-            shortLabel CD8 PW +
-            longLabel CD8TCells RNAseq PW mean_by_donor plus
-            color 86,180,233
-            autoScale on
-
-            track CD8TCells_RNAseq_PW_mean_by_donor_minus_bw
-            parent CD8TCells_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213549d6d8b649d7f2ca/display?to_ext=bigwig
-            type bigWig
-            shortLabel CD8 PW -
-            longLabel CD8TCells RNAseq PW mean_by_donor minus
-            color 86,180,233
-            negateValues on
-            autoScale on
-
-        track Endothelialcell_RNAseq_APC_avg_cell_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Endo APC RNA
-        longLabel Endothelialcell RNAseq APC avg_cell stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Endo src=APC
-
-            track Endothelialcell_RNAseq_APC_avg_cell_plus_bw
-            parent Endothelialcell_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fa80d17ebc253235/display?to_ext=bigwig
-            type bigWig
-            shortLabel Endo APC +
-            longLabel Endothelialcell RNAseq APC avg_cell plus
-            color 240,228,66
-            autoScale on
-
-            track Endothelialcell_RNAseq_APC_avg_cell_minus_bw
-            parent Endothelialcell_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721357c5a9754fa86fe49/display?to_ext=bigwig
-            type bigWig
-            shortLabel Endo APC -
-            longLabel Endothelialcell RNAseq APC avg_cell minus
-            color 240,228,66
-            negateValues on
-            autoScale on
-
-        track Endothelialcell_RNAseq_PW_mean_by_donor_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Endo PW RNA
-        longLabel Endothelialcell RNAseq PW mean_by_donor stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Endo src=PW
-
-            track Endothelialcell_RNAseq_PW_mean_by_donor_plus_bw
-            parent Endothelialcell_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135bb7a2443905f0cc6/display?to_ext=bigwig
-            type bigWig
-            shortLabel Endo PW +
-            longLabel Endothelialcell RNAseq PW mean_by_donor plus
-            color 240,228,66
-            autoScale on
-
-            track Endothelialcell_RNAseq_PW_mean_by_donor_minus_bw
-            parent Endothelialcell_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fa868e3dcc480899/display?to_ext=bigwig
-            type bigWig
-            shortLabel Endo PW -
-            longLabel Endothelialcell RNAseq PW mean_by_donor minus
-            color 240,228,66
-            negateValues on
-            autoScale on
-
-        track GABAneurons_RNAseq_APC_avg_cell_bw
-        parent RNA_view
-        container multiWig
-        shortLabel GABA APC RNA
-        longLabel GABAneurons RNAseq APC avg_cell stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=GABA src=APC
-
-            track GABAneurons_RNAseq_APC_avg_cell_plus_bw
-            parent GABAneurons_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135b3d78d778e9d1e9a/display?to_ext=bigwig
-            type bigWig
-            shortLabel GABA APC +
-            longLabel GABAneurons RNAseq APC avg_cell plus
-            color 0,158,115
-            autoScale on
-
-            track GABAneurons_RNAseq_APC_avg_cell_minus_bw
-            parent GABAneurons_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213587a6ba0fc18398aa/display?to_ext=bigwig
-            type bigWig
-            shortLabel GABA APC -
-            longLabel GABAneurons RNAseq APC avg_cell minus
-            color 0,158,115
-            negateValues on
-            autoScale on
-
-        track GABAneurons_RNAseq_PW_mean_by_donor_bw
-        parent RNA_view
-        container multiWig
-        shortLabel GABA PW RNA
-        longLabel GABAneurons RNAseq PW mean_by_donor stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=GABA src=PW
-
-            track GABAneurons_RNAseq_PW_mean_by_donor_plus_bw
-            parent GABAneurons_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721352c77ecea3b2663cc/display?to_ext=bigwig
-            type bigWig
-            shortLabel GABA PW +
-            longLabel GABAneurons RNAseq PW mean_by_donor plus
-            color 0,158,115
-            autoScale on
-
-            track GABAneurons_RNAseq_PW_mean_by_donor_minus_bw
-            parent GABAneurons_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721358701d34b6a557b29/display?to_ext=bigwig
-            type bigWig
-            shortLabel GABA PW -
-            longLabel GABAneurons RNAseq PW mean_by_donor minus
-            color 0,158,115
-            negateValues on
-            autoScale on
-
-        track Gluneurons_RNAseq_APC_avg_cell_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Glu APC RNA
-        longLabel Gluneurons RNAseq APC avg_cell stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Glu src=APC
-
-            track Gluneurons_RNAseq_APC_avg_cell_plus_bw
-            parent Gluneurons_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135acb74d35d8a956ff/display?to_ext=bigwig
-            type bigWig
-            shortLabel Glu APC +
-            longLabel Gluneurons RNAseq APC avg_cell plus
-            color 0,114,178
-            autoScale on
-
-            track Gluneurons_RNAseq_APC_avg_cell_minus_bw
-            parent Gluneurons_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721359b7626e9fc98b319/display?to_ext=bigwig
-            type bigWig
-            shortLabel Glu APC -
-            longLabel Gluneurons RNAseq APC avg_cell minus
-            color 0,114,178
-            negateValues on
-            autoScale on
-
-        track Gluneurons_RNAseq_PW_mean_by_donor_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Glu PW RNA
-        longLabel Gluneurons RNAseq PW mean_by_donor stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Glu src=PW
-
-            track Gluneurons_RNAseq_PW_mean_by_donor_plus_bw
-            parent Gluneurons_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213564eec7dfa98cae0e/display?to_ext=bigwig
-            type bigWig
-            shortLabel Glu PW +
-            longLabel Gluneurons RNAseq PW mean_by_donor plus
-            color 0,114,178
-            autoScale on
-
-            track Gluneurons_RNAseq_PW_mean_by_donor_minus_bw
-            parent Gluneurons_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135a15c450fa8ae18b3/display?to_ext=bigwig
-            type bigWig
-            shortLabel Glu PW -
-            longLabel Gluneurons RNAseq PW mean_by_donor minus
-            color 0,114,178
-            negateValues on
-            autoScale on
-
-        track Microglia_RNAseq_APC_avg_cell_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Micro APC RNA
-        longLabel Microglia RNAseq APC avg_cell stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Micro src=APC
-
-            track Microglia_RNAseq_APC_avg_cell_plus_bw
-            parent Microglia_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135afb0bb06cb6c7a7e/display?to_ext=bigwig
-            type bigWig
-            shortLabel Micro APC +
-            longLabel Microglia RNAseq APC avg_cell plus
-            color 213,94,0
-            autoScale on
-
-            track Microglia_RNAseq_APC_avg_cell_minus_bw
-            parent Microglia_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213582551282a750590d/display?to_ext=bigwig
-            type bigWig
-            shortLabel Micro APC -
-            longLabel Microglia RNAseq APC avg_cell minus
-            color 213,94,0
-            negateValues on
-            autoScale on
-
-        track Microglia_RNAseq_PW_mean_by_donor_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Micro PW RNA
-        longLabel Microglia RNAseq PW mean_by_donor stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Micro src=PW
-
-            track Microglia_RNAseq_PW_mean_by_donor_plus_bw
-            parent Microglia_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721354f2d625734662d4d/display?to_ext=bigwig
-            type bigWig
-            shortLabel Micro PW +
-            longLabel Microglia RNAseq PW mean_by_donor plus
-            color 213,94,0
-            autoScale on
-
-            track Microglia_RNAseq_PW_mean_by_donor_minus_bw
-            parent Microglia_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135df6556005f621ea2/display?to_ext=bigwig
-            type bigWig
-            shortLabel Micro PW -
-            longLabel Microglia RNAseq PW mean_by_donor minus
-            color 213,94,0
-            negateValues on
-            autoScale on
-
-        track Monocytes_RNAseq_APC_avg_cell_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Mono APC RNA
-        longLabel Monocytes RNAseq APC avg_cell stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Mono src=APC
-
-            track Monocytes_RNAseq_APC_avg_cell_plus_bw
-            parent Monocytes_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213540a31de73838bfae/display?to_ext=bigwig
-            type bigWig
-            shortLabel Mono APC +
-            longLabel Monocytes RNAseq APC avg_cell plus
-            color 204,121,167
-            autoScale on
-
-            track Monocytes_RNAseq_APC_avg_cell_minus_bw
-            parent Monocytes_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fb3db6bbe3c8f75f/display?to_ext=bigwig
-            type bigWig
-            shortLabel Mono APC -
-            longLabel Monocytes RNAseq APC avg_cell minus
-            color 204,121,167
-            negateValues on
-            autoScale on
-
-        track Monocytes_RNAseq_PW_mean_by_donor_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Mono PW RNA
-        longLabel Monocytes RNAseq PW mean_by_donor stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Mono src=PW
-
-            track Monocytes_RNAseq_PW_mean_by_donor_plus_bw
-            parent Monocytes_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213549e7cd0145517016/display?to_ext=bigwig
-            type bigWig
-            shortLabel Mono PW +
-            longLabel Monocytes RNAseq PW mean_by_donor plus
-            color 204,121,167
-            autoScale on
-
-            track Monocytes_RNAseq_PW_mean_by_donor_minus_bw
-            parent Monocytes_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135a738740a760b3a97/display?to_ext=bigwig
-            type bigWig
-            shortLabel Mono PW -
-            longLabel Monocytes RNAseq PW mean_by_donor minus
-            color 204,121,167
-            negateValues on
-            autoScale on
-
-        track Oligodendrocytes_RNAseq_APC_avg_cell_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Oligo APC RNA
-        longLabel Oligodendrocytes RNAseq APC avg_cell stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Oligo src=APC
-
-            track Oligodendrocytes_RNAseq_APC_avg_cell_plus_bw
-            parent Oligodendrocytes_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213598f5cbd5ffe65375/display?to_ext=bigwig
-            type bigWig
-            shortLabel Oligo APC +
-            longLabel Oligodendrocytes RNAseq APC avg_cell plus
-            color 148,103,189
-            autoScale on
-
-            track Oligodendrocytes_RNAseq_APC_avg_cell_minus_bw
-            parent Oligodendrocytes_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fd2f73fbf43d6879/display?to_ext=bigwig
-            type bigWig
-            shortLabel Oligo APC -
-            longLabel Oligodendrocytes RNAseq APC avg_cell minus
-            color 148,103,189
-            negateValues on
-            autoScale on
-
-        track Oligodendrocytes_RNAseq_PW_mean_by_donor_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Oligo PW RNA
-        longLabel Oligodendrocytes RNAseq PW mean_by_donor stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Oligo src=PW
-
-            track Oligodendrocytes_RNAseq_PW_mean_by_donor_plus_bw
-            parent Oligodendrocytes_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135dff61178d479a2bd/display?to_ext=bigwig
-            type bigWig
-            shortLabel Oligo PW +
-            longLabel Oligodendrocytes RNAseq PW mean_by_donor plus
-            color 148,103,189
-            autoScale on
-
-            track Oligodendrocytes_RNAseq_PW_mean_by_donor_minus_bw
-            parent Oligodendrocytes_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135614da76de49fe6d3/display?to_ext=bigwig
-            type bigWig
-            shortLabel Oligo PW -
-            longLabel Oligodendrocytes RNAseq PW mean_by_donor minus
-            color 148,103,189
-            negateValues on
-            autoScale on
-
-        track OPCs_RNAseq_APC_avg_cell_bw
-        parent RNA_view
-        container multiWig
-        shortLabel OPC APC RNA
-        longLabel OPCs RNAseq APC avg_cell stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=OPC src=APC
-
-            track OPCs_RNAseq_APC_avg_cell_plus_bw
-            parent OPCs_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213594a07b7367d740db/display?to_ext=bigwig
-            type bigWig
-            shortLabel OPC APC +
-            longLabel OPCs RNAseq APC avg_cell plus
-            color 100,100,100
-            autoScale on
-
-            track OPCs_RNAseq_APC_avg_cell_minus_bw
-            parent OPCs_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135d55297fca444a2b2/display?to_ext=bigwig
-            type bigWig
-            shortLabel OPC APC -
-            longLabel OPCs RNAseq APC avg_cell minus
-            color 100,100,100
-            negateValues on
-            autoScale on
-
-        track OPCs_RNAseq_PW_mean_by_donor_bw
-        parent RNA_view
-        container multiWig
-        shortLabel OPC PW RNA
-        longLabel OPCs RNAseq PW mean_by_donor stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=OPC src=PW
-
-            track OPCs_RNAseq_PW_mean_by_donor_plus_bw
-            parent OPCs_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135f7ca4e326386e7a6/display?to_ext=bigwig
-            type bigWig
-            shortLabel OPC PW +
-            longLabel OPCs RNAseq PW mean_by_donor plus
-            color 100,100,100
-            autoScale on
-
-            track OPCs_RNAseq_PW_mean_by_donor_minus_bw
-            parent OPCs_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721357bdfd6866e1c3f27/display?to_ext=bigwig
-            type bigWig
-            shortLabel OPC PW -
-            longLabel OPCs RNAseq PW mean_by_donor minus
-            color 100,100,100
-            negateValues on
-            autoScale on
-
-        track Pericytes_RNAseq_APC_avg_cell_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Peri APC RNA
-        longLabel Pericytes RNAseq APC avg_cell stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Peri src=APC
-
-            track Pericytes_RNAseq_APC_avg_cell_plus_bw
-            parent Pericytes_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fe7dd23075091a2d/display?to_ext=bigwig
-            type bigWig
-            shortLabel Peri APC +
-            longLabel Pericytes RNAseq APC avg_cell plus
-            color 50,50,50
-            autoScale on
-
-            track Pericytes_RNAseq_APC_avg_cell_minus_bw
-            parent Pericytes_RNAseq_APC_avg_cell_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213532c32c5c7d8504d0/display?to_ext=bigwig
-            type bigWig
-            shortLabel Peri APC -
-            longLabel Pericytes RNAseq APC avg_cell minus
-            color 50,50,50
-            negateValues on
-            autoScale on
-
-        track Pericytes_RNAseq_PW_mean_by_donor_bw
-        parent RNA_view
-        container multiWig
-        shortLabel Peri PW RNA
-        longLabel Pericytes RNAseq PW mean_by_donor stranded
-        type bigWig
-        visibility full
-        aggregate transparentOverlay
-        showSubtrackColorOnUi on
-        alwaysZero on
-        autoScale on
-        maxHeightPixels 100:60:20
-        subGroups view=RNA cell=Peri src=PW
-
-            track Pericytes_RNAseq_PW_mean_by_donor_plus_bw
-            parent Pericytes_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721350e08fb3f75ff0978/display?to_ext=bigwig
-            type bigWig
-            shortLabel Peri PW +
-            longLabel Pericytes RNAseq PW mean_by_donor plus
-            color 50,50,50
-            autoScale on
-
-            track Pericytes_RNAseq_PW_mean_by_donor_minus_bw
-            parent Pericytes_RNAseq_PW_mean_by_donor_bw
-            bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721354f60a872274adbe1/display?to_ext=bigwig
-            type bigWig
-            shortLabel Peri PW -
-            longLabel Pericytes RNAseq PW mean_by_donor minus
-            color 50,50,50
-            negateValues on
-            autoScale on
-
-    track ATAC_view
-    parent APC_PW_multiome
-    shortLabel ATAC
-    longLabel ATAC-seq signal tracks
-    view ATAC
+    track Astrocytes_RNAseq_PW_mean_by_donor_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Astro PW RNA
+    longLabel Astrocytes RNAseq PW mean_by_donor stranded
     type bigWig
-    visibility dense
-    subGroups view=ATAC
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Astro src=PW
 
-        track Astrocytes_APC_avg_cell_bw
-        parent ATAC_view
+        track Astrocytes_RNAseq_PW_mean_by_donor_plus_bw
+        parent Astrocytes_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135e5f30c8b6e5a4e15/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213533fd9b7315cb82f1/display?to_ext=bigwig
-        shortLabel Astro APC
-        longLabel Astrocytes ATAC APC avg_cell
-        subGroups view=ATAC cell=Astro src=APC
+        shortLabel Astro PW +
+        longLabel Astrocytes RNAseq PW mean_by_donor plus
         color 230,159,0
-        autoScale on
 
-        track Astrocytes_PW_mean_by_donor_bw
-        parent ATAC_view
+        track Astrocytes_RNAseq_PW_mean_by_donor_minus_bw
+        parent Astrocytes_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135ea455ac3027da576/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135a1eada1468b7b182/display?to_ext=bigwig
-        shortLabel Astro PW
-        longLabel Astrocytes ATAC PW mean_by_donor
-        subGroups view=ATAC cell=Astro src=PW
+        shortLabel Astro PW -
+        longLabel Astrocytes RNAseq PW mean_by_donor minus
         color 230,159,0
-        autoScale on
+        negateValues on
 
-        track CD8TCells_APC_avg_cell_bw
-        parent ATAC_view
+    track CD8TCells_RNAseq_APC_avg_cell_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel CD8 APC RNA
+    longLabel CD8TCells RNAseq APC avg_cell stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=CD8 src=APC
+
+        track CD8TCells_RNAseq_APC_avg_cell_plus_bw
+        parent CD8TCells_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721356ec3b7d1d431be95/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721357ef777842d074274/display?to_ext=bigwig
-        shortLabel CD8 APC
-        longLabel CD8TCells ATAC APC avg_cell
-        subGroups view=ATAC cell=CD8 src=APC
+        shortLabel CD8 APC +
+        longLabel CD8TCells RNAseq APC avg_cell plus
         color 86,180,233
-        autoScale on
 
-        track CD8TCells_PW_mean_by_donor_bw
-        parent ATAC_view
+        track CD8TCells_RNAseq_APC_avg_cell_minus_bw
+        parent CD8TCells_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721353df76dcce036047d/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135f321d2f68f4906c4/display?to_ext=bigwig
-        shortLabel CD8 PW
-        longLabel CD8TCells ATAC PW mean_by_donor
-        subGroups view=ATAC cell=CD8 src=PW
+        shortLabel CD8 APC -
+        longLabel CD8TCells RNAseq APC avg_cell minus
         color 86,180,233
-        autoScale on
+        negateValues on
 
-        track DAneurons_APC_avg_cell_bw
-        parent ATAC_view
-        type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135d4f992e864217687/display?to_ext=bigwig
-        shortLabel DA APC
-        longLabel DAneurons ATAC APC avg_cell
-        subGroups view=ATAC cell=DA src=APC
-        color 0,0,0
-        autoScale on
+    track CD8TCells_RNAseq_PW_mean_by_donor_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel CD8 PW RNA
+    longLabel CD8TCells RNAseq PW mean_by_donor stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=CD8 src=PW
 
-        track DAneurons_PW_mean_by_donor_bw
-        parent ATAC_view
+        track CD8TCells_RNAseq_PW_mean_by_donor_plus_bw
+        parent CD8TCells_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721355206225b37a8e0a6/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213563267bc2cd3a1a3c/display?to_ext=bigwig
-        shortLabel DA PW
-        longLabel DAneurons ATAC PW mean_by_donor
-        subGroups view=ATAC cell=DA src=PW
-        color 0,0,0
-        autoScale on
+        shortLabel CD8 PW +
+        longLabel CD8TCells RNAseq PW mean_by_donor plus
+        color 86,180,233
 
-        track Endothelialcell_APC_avg_cell_bw
-        parent ATAC_view
+        track CD8TCells_RNAseq_PW_mean_by_donor_minus_bw
+        parent CD8TCells_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213549d6d8b649d7f2ca/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721355540efef6cf734e2/display?to_ext=bigwig
-        shortLabel Endo APC
-        longLabel Endothelialcell ATAC APC avg_cell
-        subGroups view=ATAC cell=Endo src=APC
+        shortLabel CD8 PW -
+        longLabel CD8TCells RNAseq PW mean_by_donor minus
+        color 86,180,233
+        negateValues on
+
+    track Endothelialcell_RNAseq_APC_avg_cell_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Endo APC RNA
+    longLabel Endothelialcell RNAseq APC avg_cell stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Endo src=APC
+
+        track Endothelialcell_RNAseq_APC_avg_cell_plus_bw
+        parent Endothelialcell_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fa80d17ebc253235/display?to_ext=bigwig
+        type bigWig
+        shortLabel Endo APC +
+        longLabel Endothelialcell RNAseq APC avg_cell plus
         color 240,228,66
-        autoScale on
 
-        track Endothelialcell_PW_mean_by_donor_bw
-        parent ATAC_view
+        track Endothelialcell_RNAseq_APC_avg_cell_minus_bw
+        parent Endothelialcell_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721357c5a9754fa86fe49/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721352a9b1880ec5b8cf9/display?to_ext=bigwig
-        shortLabel Endo PW
-        longLabel Endothelialcell ATAC PW mean_by_donor
-        subGroups view=ATAC cell=Endo src=PW
+        shortLabel Endo APC -
+        longLabel Endothelialcell RNAseq APC avg_cell minus
         color 240,228,66
-        autoScale on
+        negateValues on
 
-        track GABAneurons_APC_avg_cell_bw
-        parent ATAC_view
+    track Endothelialcell_RNAseq_PW_mean_by_donor_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Endo PW RNA
+    longLabel Endothelialcell RNAseq PW mean_by_donor stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Endo src=PW
+
+        track Endothelialcell_RNAseq_PW_mean_by_donor_plus_bw
+        parent Endothelialcell_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135bb7a2443905f0cc6/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213501a5eee438323644/display?to_ext=bigwig
-        shortLabel GABA APC
-        longLabel GABAneurons ATAC APC avg_cell
-        subGroups view=ATAC cell=GABA src=APC
+        shortLabel Endo PW +
+        longLabel Endothelialcell RNAseq PW mean_by_donor plus
+        color 240,228,66
+
+        track Endothelialcell_RNAseq_PW_mean_by_donor_minus_bw
+        parent Endothelialcell_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fa868e3dcc480899/display?to_ext=bigwig
+        type bigWig
+        shortLabel Endo PW -
+        longLabel Endothelialcell RNAseq PW mean_by_donor minus
+        color 240,228,66
+        negateValues on
+
+    track GABAneurons_RNAseq_APC_avg_cell_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel GABA APC RNA
+    longLabel GABAneurons RNAseq APC avg_cell stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=GABA src=APC
+
+        track GABAneurons_RNAseq_APC_avg_cell_plus_bw
+        parent GABAneurons_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135b3d78d778e9d1e9a/display?to_ext=bigwig
+        type bigWig
+        shortLabel GABA APC +
+        longLabel GABAneurons RNAseq APC avg_cell plus
         color 0,158,115
-        autoScale on
 
-        track GABAneurons_PW_mean_by_donor_bw
-        parent ATAC_view
+        track GABAneurons_RNAseq_APC_avg_cell_minus_bw
+        parent GABAneurons_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213587a6ba0fc18398aa/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135fad1ada4848ec9fc/display?to_ext=bigwig
-        shortLabel GABA PW
-        longLabel GABAneurons ATAC PW mean_by_donor
-        subGroups view=ATAC cell=GABA src=PW
+        shortLabel GABA APC -
+        longLabel GABAneurons RNAseq APC avg_cell minus
         color 0,158,115
-        autoScale on
+        negateValues on
 
-        track Gluneurons_APC_avg_cell_bw
-        parent ATAC_view
+    track GABAneurons_RNAseq_PW_mean_by_donor_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel GABA PW RNA
+    longLabel GABAneurons RNAseq PW mean_by_donor stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=GABA src=PW
+
+        track GABAneurons_RNAseq_PW_mean_by_donor_plus_bw
+        parent GABAneurons_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721352c77ecea3b2663cc/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135aec5cf4289939625/display?to_ext=bigwig
-        shortLabel Glu APC
-        longLabel Gluneurons ATAC APC avg_cell
-        subGroups view=ATAC cell=Glu src=APC
+        shortLabel GABA PW +
+        longLabel GABAneurons RNAseq PW mean_by_donor plus
+        color 0,158,115
+
+        track GABAneurons_RNAseq_PW_mean_by_donor_minus_bw
+        parent GABAneurons_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721358701d34b6a557b29/display?to_ext=bigwig
+        type bigWig
+        shortLabel GABA PW -
+        longLabel GABAneurons RNAseq PW mean_by_donor minus
+        color 0,158,115
+        negateValues on
+
+    track Gluneurons_RNAseq_APC_avg_cell_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Glu APC RNA
+    longLabel Gluneurons RNAseq APC avg_cell stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Glu src=APC
+
+        track Gluneurons_RNAseq_APC_avg_cell_plus_bw
+        parent Gluneurons_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135acb74d35d8a956ff/display?to_ext=bigwig
+        type bigWig
+        shortLabel Glu APC +
+        longLabel Gluneurons RNAseq APC avg_cell plus
         color 0,114,178
-        autoScale on
 
-        track Gluneurons_PW_mean_by_donor_bw
-        parent ATAC_view
+        track Gluneurons_RNAseq_APC_avg_cell_minus_bw
+        parent Gluneurons_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721359b7626e9fc98b319/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135b0c2a79d7624707e/display?to_ext=bigwig
-        shortLabel Glu PW
-        longLabel Gluneurons ATAC PW mean_by_donor
-        subGroups view=ATAC cell=Glu src=PW
+        shortLabel Glu APC -
+        longLabel Gluneurons RNAseq APC avg_cell minus
         color 0,114,178
-        autoScale on
+        negateValues on
 
-        track Microglia_APC_avg_cell_bw
-        parent ATAC_view
+    track Gluneurons_RNAseq_PW_mean_by_donor_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Glu PW RNA
+    longLabel Gluneurons RNAseq PW mean_by_donor stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Glu src=PW
+
+        track Gluneurons_RNAseq_PW_mean_by_donor_plus_bw
+        parent Gluneurons_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213564eec7dfa98cae0e/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721350a17a9c6162e1b69/display?to_ext=bigwig
-        shortLabel Micro APC
-        longLabel Microglia ATAC APC avg_cell
-        subGroups view=ATAC cell=Micro src=APC
+        shortLabel Glu PW +
+        longLabel Gluneurons RNAseq PW mean_by_donor plus
+        color 0,114,178
+
+        track Gluneurons_RNAseq_PW_mean_by_donor_minus_bw
+        parent Gluneurons_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135a15c450fa8ae18b3/display?to_ext=bigwig
+        type bigWig
+        shortLabel Glu PW -
+        longLabel Gluneurons RNAseq PW mean_by_donor minus
+        color 0,114,178
+        negateValues on
+
+    track Microglia_RNAseq_APC_avg_cell_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Micro APC RNA
+    longLabel Microglia RNAseq APC avg_cell stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Micro src=APC
+
+        track Microglia_RNAseq_APC_avg_cell_plus_bw
+        parent Microglia_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135afb0bb06cb6c7a7e/display?to_ext=bigwig
+        type bigWig
+        shortLabel Micro APC +
+        longLabel Microglia RNAseq APC avg_cell plus
         color 213,94,0
-        autoScale on
 
-        track Microglia_PW_mean_by_donor_bw
-        parent ATAC_view
+        track Microglia_RNAseq_APC_avg_cell_minus_bw
+        parent Microglia_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213582551282a750590d/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135444f4ee58a070bdb/display?to_ext=bigwig
-        shortLabel Micro PW
-        longLabel Microglia ATAC PW mean_by_donor
-        subGroups view=ATAC cell=Micro src=PW
+        shortLabel Micro APC -
+        longLabel Microglia RNAseq APC avg_cell minus
         color 213,94,0
-        autoScale on
+        negateValues on
 
-        track Monocytes_APC_avg_cell_bw
-        parent ATAC_view
+    track Microglia_RNAseq_PW_mean_by_donor_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Micro PW RNA
+    longLabel Microglia RNAseq PW mean_by_donor stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Micro src=PW
+
+        track Microglia_RNAseq_PW_mean_by_donor_plus_bw
+        parent Microglia_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721354f2d625734662d4d/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721356dd9e60489684d9e/display?to_ext=bigwig
-        shortLabel Mono APC
-        longLabel Monocytes ATAC APC avg_cell
-        subGroups view=ATAC cell=Mono src=APC
+        shortLabel Micro PW +
+        longLabel Microglia RNAseq PW mean_by_donor plus
+        color 213,94,0
+
+        track Microglia_RNAseq_PW_mean_by_donor_minus_bw
+        parent Microglia_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135df6556005f621ea2/display?to_ext=bigwig
+        type bigWig
+        shortLabel Micro PW -
+        longLabel Microglia RNAseq PW mean_by_donor minus
+        color 213,94,0
+        negateValues on
+
+    track Monocytes_RNAseq_APC_avg_cell_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Mono APC RNA
+    longLabel Monocytes RNAseq APC avg_cell stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Mono src=APC
+
+        track Monocytes_RNAseq_APC_avg_cell_plus_bw
+        parent Monocytes_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213540a31de73838bfae/display?to_ext=bigwig
+        type bigWig
+        shortLabel Mono APC +
+        longLabel Monocytes RNAseq APC avg_cell plus
         color 204,121,167
-        autoScale on
 
-        track Monocytes_PW_mean_by_donor_bw
-        parent ATAC_view
+        track Monocytes_RNAseq_APC_avg_cell_minus_bw
+        parent Monocytes_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fb3db6bbe3c8f75f/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135ace02d530317cb8f/display?to_ext=bigwig
-        shortLabel Mono PW
-        longLabel Monocytes ATAC PW mean_by_donor
-        subGroups view=ATAC cell=Mono src=PW
+        shortLabel Mono APC -
+        longLabel Monocytes RNAseq APC avg_cell minus
         color 204,121,167
-        autoScale on
+        negateValues on
 
-        track Oligodendrocytes_APC_avg_cell_bw
-        parent ATAC_view
+    track Monocytes_RNAseq_PW_mean_by_donor_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Mono PW RNA
+    longLabel Monocytes RNAseq PW mean_by_donor stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Mono src=PW
+
+        track Monocytes_RNAseq_PW_mean_by_donor_plus_bw
+        parent Monocytes_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213549e7cd0145517016/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135fba1dd988e66dc23/display?to_ext=bigwig
-        shortLabel Oligo APC
-        longLabel Oligodendrocytes ATAC APC avg_cell
-        subGroups view=ATAC cell=Oligo src=APC
+        shortLabel Mono PW +
+        longLabel Monocytes RNAseq PW mean_by_donor plus
+        color 204,121,167
+
+        track Monocytes_RNAseq_PW_mean_by_donor_minus_bw
+        parent Monocytes_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135a738740a760b3a97/display?to_ext=bigwig
+        type bigWig
+        shortLabel Mono PW -
+        longLabel Monocytes RNAseq PW mean_by_donor minus
+        color 204,121,167
+        negateValues on
+
+    track Oligodendrocytes_RNAseq_APC_avg_cell_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Oligo APC RNA
+    longLabel Oligodendrocytes RNAseq APC avg_cell stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Oligo src=APC
+
+        track Oligodendrocytes_RNAseq_APC_avg_cell_plus_bw
+        parent Oligodendrocytes_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213598f5cbd5ffe65375/display?to_ext=bigwig
+        type bigWig
+        shortLabel Oligo APC +
+        longLabel Oligodendrocytes RNAseq APC avg_cell plus
         color 148,103,189
-        autoScale on
 
-        track Oligodendrocytes_PW_mean_by_donor_bw
-        parent ATAC_view
+        track Oligodendrocytes_RNAseq_APC_avg_cell_minus_bw
+        parent Oligodendrocytes_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fd2f73fbf43d6879/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721354110bfec0ef50870/display?to_ext=bigwig
-        shortLabel Oligo PW
-        longLabel Oligodendrocytes ATAC PW mean_by_donor
-        subGroups view=ATAC cell=Oligo src=PW
+        shortLabel Oligo APC -
+        longLabel Oligodendrocytes RNAseq APC avg_cell minus
         color 148,103,189
-        autoScale on
+        negateValues on
 
-        track OPCs_APC_avg_cell_bw
-        parent ATAC_view
+    track Oligodendrocytes_RNAseq_PW_mean_by_donor_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Oligo PW RNA
+    longLabel Oligodendrocytes RNAseq PW mean_by_donor stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Oligo src=PW
+
+        track Oligodendrocytes_RNAseq_PW_mean_by_donor_plus_bw
+        parent Oligodendrocytes_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135dff61178d479a2bd/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721358798568260f18e48/display?to_ext=bigwig
-        shortLabel OPC APC
-        longLabel OPCs ATAC APC avg_cell
-        subGroups view=ATAC cell=OPC src=APC
+        shortLabel Oligo PW +
+        longLabel Oligodendrocytes RNAseq PW mean_by_donor plus
+        color 148,103,189
+
+        track Oligodendrocytes_RNAseq_PW_mean_by_donor_minus_bw
+        parent Oligodendrocytes_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135614da76de49fe6d3/display?to_ext=bigwig
+        type bigWig
+        shortLabel Oligo PW -
+        longLabel Oligodendrocytes RNAseq PW mean_by_donor minus
+        color 148,103,189
+        negateValues on
+
+    track OPCs_RNAseq_APC_avg_cell_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel OPC APC RNA
+    longLabel OPCs RNAseq APC avg_cell stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=OPC src=APC
+
+        track OPCs_RNAseq_APC_avg_cell_plus_bw
+        parent OPCs_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213594a07b7367d740db/display?to_ext=bigwig
+        type bigWig
+        shortLabel OPC APC +
+        longLabel OPCs RNAseq APC avg_cell plus
         color 100,100,100
-        autoScale on
 
-        track OPCs_PW_mean_by_donor_bw
-        parent ATAC_view
+        track OPCs_RNAseq_APC_avg_cell_minus_bw
+        parent OPCs_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135d55297fca444a2b2/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135b9decfe26fc44047/display?to_ext=bigwig
-        shortLabel OPC PW
-        longLabel OPCs ATAC PW mean_by_donor
-        subGroups view=ATAC cell=OPC src=PW
+        shortLabel OPC APC -
+        longLabel OPCs RNAseq APC avg_cell minus
         color 100,100,100
-        autoScale on
+        negateValues on
 
-        track Pericytes_APC_avg_cell_bw
-        parent ATAC_view
-        type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135f6dd279d94f13300/display?to_ext=bigwig
-        shortLabel Peri APC
-        longLabel Pericytes ATAC APC avg_cell
-        subGroups view=ATAC cell=Peri src=APC
-        color 50,50,50
-        autoScale on
+    track OPCs_RNAseq_PW_mean_by_donor_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel OPC PW RNA
+    longLabel OPCs RNAseq PW mean_by_donor stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=OPC src=PW
 
-        track Pericytes_PW_mean_by_donor_bw
-        parent ATAC_view
+        track OPCs_RNAseq_PW_mean_by_donor_plus_bw
+        parent OPCs_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135f7ca4e326386e7a6/display?to_ext=bigwig
         type bigWig
-        bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213599721f764ab1c3fa/display?to_ext=bigwig
-        shortLabel Peri PW
-        longLabel Pericytes ATAC PW mean_by_donor
-        subGroups view=ATAC cell=Peri src=PW
+        shortLabel OPC PW +
+        longLabel OPCs RNAseq PW mean_by_donor plus
+        color 100,100,100
+
+        track OPCs_RNAseq_PW_mean_by_donor_minus_bw
+        parent OPCs_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721357bdfd6866e1c3f27/display?to_ext=bigwig
+        type bigWig
+        shortLabel OPC PW -
+        longLabel OPCs RNAseq PW mean_by_donor minus
+        color 100,100,100
+        negateValues on
+
+    track Pericytes_RNAseq_APC_avg_cell_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Peri APC RNA
+    longLabel Pericytes RNAseq APC avg_cell stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Peri src=APC
+
+        track Pericytes_RNAseq_APC_avg_cell_plus_bw
+        parent Pericytes_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a472135fe7dd23075091a2d/display?to_ext=bigwig
+        type bigWig
+        shortLabel Peri APC +
+        longLabel Pericytes RNAseq APC avg_cell plus
         color 50,50,50
-        autoScale on
+
+        track Pericytes_RNAseq_APC_avg_cell_minus_bw
+        parent Pericytes_RNAseq_APC_avg_cell_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213532c32c5c7d8504d0/display?to_ext=bigwig
+        type bigWig
+        shortLabel Peri APC -
+        longLabel Pericytes RNAseq APC avg_cell minus
+        color 50,50,50
+        negateValues on
+
+    track Pericytes_RNAseq_PW_mean_by_donor_bw
+    parent APC_PW_RNA
+    container multiWig
+    shortLabel Peri PW RNA
+    longLabel Pericytes RNAseq PW mean_by_donor stranded
+    type bigWig
+    visibility full
+    aggregate transparentOverlay
+    showSubtrackColorOnUi on
+    alwaysZero on
+    autoScale off
+    viewLimits -20:20
+    maxHeightPixels 100:60:20
+    subGroups cell=Peri src=PW
+
+        track Pericytes_RNAseq_PW_mean_by_donor_plus_bw
+        parent Pericytes_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721350e08fb3f75ff0978/display?to_ext=bigwig
+        type bigWig
+        shortLabel Peri PW +
+        longLabel Pericytes RNAseq PW mean_by_donor plus
+        color 50,50,50
+
+        track Pericytes_RNAseq_PW_mean_by_donor_minus_bw
+        parent Pericytes_RNAseq_PW_mean_by_donor_bw
+        bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721354f60a872274adbe1/display?to_ext=bigwig
+        type bigWig
+        shortLabel Peri PW -
+        longLabel Pericytes RNAseq PW mean_by_donor minus
+        color 50,50,50
+        negateValues on
+
+########################################
+# ATAC COMPOSITE
+########################################
+
+track APC_PW_ATAC
+parent APC_PW_multiome
+compositeTrack on
+shortLabel ATAC
+longLabel ATAC-seq signal tracks
+type bigWig
+visibility full
+allButtonPair on
+dragAndDrop subTracks
+subGroup1 cell CellType Astro=Astro CD8=CD8 DA=DA Endo=Endo GABA=GABA Glu=Glu Micro=Micro Mono=Monocytes Oligo=Oligo OPC=OPC Peri=Pericytes
+subGroup2 src Source APC=APC PW=PW
+dimensions dimX=cell dimY=src
+sortOrder cell=+ src=+
+maxHeightPixels 100:60:20
+
+    track Astrocytes_APC_avg_cell_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213533fd9b7315cb82f1/display?to_ext=bigwig
+    shortLabel Astro APC
+    longLabel Astrocytes ATAC APC avg_cell
+    subGroups cell=Astro src=APC
+    color 230,159,0
+    autoScale on
+
+    track Astrocytes_PW_mean_by_donor_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135a1eada1468b7b182/display?to_ext=bigwig
+    shortLabel Astro PW
+    longLabel Astrocytes ATAC PW mean_by_donor
+    subGroups cell=Astro src=PW
+    color 230,159,0
+    autoScale on
+
+    track CD8TCells_APC_avg_cell_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721357ef777842d074274/display?to_ext=bigwig
+    shortLabel CD8 APC
+    longLabel CD8TCells ATAC APC avg_cell
+    subGroups cell=CD8 src=APC
+    color 86,180,233
+    autoScale on
+
+    track CD8TCells_PW_mean_by_donor_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135f321d2f68f4906c4/display?to_ext=bigwig
+    shortLabel CD8 PW
+    longLabel CD8TCells ATAC PW mean_by_donor
+    subGroups cell=CD8 src=PW
+    color 86,180,233
+    autoScale on
+
+    track DAneurons_APC_avg_cell_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135d4f992e864217687/display?to_ext=bigwig
+    shortLabel DA APC
+    longLabel DAneurons ATAC APC avg_cell
+    subGroups cell=DA src=APC
+    color 0,0,0
+    autoScale on
+
+    track DAneurons_PW_mean_by_donor_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213563267bc2cd3a1a3c/display?to_ext=bigwig
+    shortLabel DA PW
+    longLabel DAneurons ATAC PW mean_by_donor
+    subGroups cell=DA src=PW
+    color 0,0,0
+    autoScale on
+
+    track Endothelialcell_APC_avg_cell_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721355540efef6cf734e2/display?to_ext=bigwig
+    shortLabel Endo APC
+    longLabel Endothelialcell ATAC APC avg_cell
+    subGroups cell=Endo src=APC
+    color 240,228,66
+    autoScale on
+
+    track Endothelialcell_PW_mean_by_donor_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721352a9b1880ec5b8cf9/display?to_ext=bigwig
+    shortLabel Endo PW
+    longLabel Endothelialcell ATAC PW mean_by_donor
+    subGroups cell=Endo src=PW
+    color 240,228,66
+    autoScale on
+
+    track GABAneurons_APC_avg_cell_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213501a5eee438323644/display?to_ext=bigwig
+    shortLabel GABA APC
+    longLabel GABAneurons ATAC APC avg_cell
+    subGroups cell=GABA src=APC
+    color 0,158,115
+    autoScale on
+
+    track GABAneurons_PW_mean_by_donor_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135fad1ada4848ec9fc/display?to_ext=bigwig
+    shortLabel GABA PW
+    longLabel GABAneurons ATAC PW mean_by_donor
+    subGroups cell=GABA src=PW
+    color 0,158,115
+    autoScale on
+
+    track Gluneurons_APC_avg_cell_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135aec5cf4289939625/display?to_ext=bigwig
+    shortLabel Glu APC
+    longLabel Gluneurons ATAC APC avg_cell
+    subGroups cell=Glu src=APC
+    color 0,114,178
+    autoScale on
+
+    track Gluneurons_PW_mean_by_donor_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135b0c2a79d7624707e/display?to_ext=bigwig
+    shortLabel Glu PW
+    longLabel Gluneurons ATAC PW mean_by_donor
+    subGroups cell=Glu src=PW
+    color 0,114,178
+    autoScale on
+
+    track Microglia_APC_avg_cell_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721350a17a9c6162e1b69/display?to_ext=bigwig
+    shortLabel Micro APC
+    longLabel Microglia ATAC APC avg_cell
+    subGroups cell=Micro src=APC
+    color 213,94,0
+    autoScale on
+
+    track Microglia_PW_mean_by_donor_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135444f4ee58a070bdb/display?to_ext=bigwig
+    shortLabel Micro PW
+    longLabel Microglia ATAC PW mean_by_donor
+    subGroups cell=Micro src=PW
+    color 213,94,0
+    autoScale on
+
+    track Monocytes_APC_avg_cell_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721356dd9e60489684d9e/display?to_ext=bigwig
+    shortLabel Mono APC
+    longLabel Monocytes ATAC APC avg_cell
+    subGroups cell=Mono src=APC
+    color 204,121,167
+    autoScale on
+
+    track Monocytes_PW_mean_by_donor_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135ace02d530317cb8f/display?to_ext=bigwig
+    shortLabel Mono PW
+    longLabel Monocytes ATAC PW mean_by_donor
+    subGroups cell=Mono src=PW
+    color 204,121,167
+    autoScale on
+
+    track Oligodendrocytes_APC_avg_cell_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135fba1dd988e66dc23/display?to_ext=bigwig
+    shortLabel Oligo APC
+    longLabel Oligodendrocytes ATAC APC avg_cell
+    subGroups cell=Oligo src=APC
+    color 148,103,189
+    autoScale on
+
+    track Oligodendrocytes_PW_mean_by_donor_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721354110bfec0ef50870/display?to_ext=bigwig
+    shortLabel Oligo PW
+    longLabel Oligodendrocytes ATAC PW mean_by_donor
+    subGroups cell=Oligo src=PW
+    color 148,103,189
+    autoScale on
+
+    track OPCs_APC_avg_cell_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a4721358798568260f18e48/display?to_ext=bigwig
+    shortLabel OPC APC
+    longLabel OPCs ATAC APC avg_cell
+    subGroups cell=OPC src=APC
+    color 100,100,100
+    autoScale on
+
+    track OPCs_PW_mean_by_donor_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135b9decfe26fc44047/display?to_ext=bigwig
+    shortLabel OPC PW
+    longLabel OPCs ATAC PW mean_by_donor
+    subGroups cell=OPC src=PW
+    color 100,100,100
+    autoScale on
+
+    track Pericytes_APC_avg_cell_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a472135f6dd279d94f13300/display?to_ext=bigwig
+    shortLabel Peri APC
+    longLabel Pericytes ATAC APC avg_cell
+    subGroups cell=Peri src=APC
+    color 50,50,50
+    autoScale on
+
+    track Pericytes_PW_mean_by_donor_bw
+    parent APC_PW_ATAC
+    type bigWig
+    bigDataUrl https://usegalaxy.org/api/datasets/f9cad7b01a47213599721f764ab1c3fa/display?to_ext=bigwig
+    shortLabel Peri PW
+    longLabel Pericytes ATAC PW mean_by_donor
+    subGroups cell=Peri src=PW
+    color 50,50,50
+    autoScale on
