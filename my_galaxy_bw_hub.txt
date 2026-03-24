@@ -30,7 +30,7 @@ maxHeightPixels 60:60:60
     visibility full
     subGroups view=RNA
 
-        track Astrocytes_RNAseq_APC_avg_cell_plus_bw
+        track 01_Astrocytes_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
         bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a4721357b466dd2ecc1c6ff/display?to_ext=bigwig
         type bigWig
@@ -48,7 +48,7 @@ maxHeightPixels 60:60:60
         yLineMark 0
         yLineOnOff on
 
-        track Astrocytes_RNAseq_APC_avg_cell_minus_bw
+        track 02_Astrocytes_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
         bigDataUrl https://usegalaxy.org/datasets/f9cad7b01a47213540ac72631581338f/display?to_ext=bigwig
         type bigWig
