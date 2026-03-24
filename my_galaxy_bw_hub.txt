@@ -112,7 +112,7 @@ maxHeightPixels 60:60:60
         shortLabel CD8 APC +
         longLabel CD8TCells RNAseq APC avg_cell plus
         subGroups view=RNA cell=CD8 src=APC strand=plus
-        priority 1
+        priority 5
         color 86,180,233
         visibility full
         autoScale on
@@ -130,7 +130,7 @@ maxHeightPixels 60:60:60
         shortLabel CD8 APC -
         longLabel CD8TCells RNAseq APC avg_cell minus
         subGroups view=RNA cell=CD8 src=APC strand=minus
-        priority 2
+        priority 6
         color 86,180,233
         visibility full
         negateValues on
@@ -149,7 +149,7 @@ maxHeightPixels 60:60:60
         shortLabel CD8 PW +
         longLabel CD8TCells RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=CD8 src=PW strand=plus
-        priority 1
+        priority 7
         color 86,180,233
         visibility full
         autoScale on
@@ -167,7 +167,7 @@ maxHeightPixels 60:60:60
         shortLabel CD8 PW -
         longLabel CD8TCells RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=CD8 src=PW strand=minus
-        priority 2
+        priority 8
         color 86,180,233
         visibility full
         negateValues on
@@ -186,7 +186,7 @@ maxHeightPixels 60:60:60
         shortLabel Endo APC +
         longLabel Endothelialcell RNAseq APC avg_cell plus
         subGroups view=RNA cell=Endo src=APC strand=plus
-        priority 1
+        priority 9
         color 240,228,66
         visibility full
         autoScale on
@@ -204,7 +204,7 @@ maxHeightPixels 60:60:60
         shortLabel Endo APC -
         longLabel Endothelialcell RNAseq APC avg_cell minus
         subGroups view=RNA cell=Endo src=APC strand=minus
-        priority 2
+        priority 10
         color 240,228,66
         visibility full
         negateValues on
@@ -223,7 +223,7 @@ maxHeightPixels 60:60:60
         shortLabel Endo PW +
         longLabel Endothelialcell RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Endo src=PW strand=plus
-        priority 1
+        priority 11
         color 240,228,66
         visibility full
         autoScale on
@@ -241,7 +241,7 @@ maxHeightPixels 60:60:60
         shortLabel Endo PW -
         longLabel Endothelialcell RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Endo src=PW strand=minus
-        priority 2
+        priority 12
         color 240,228,66
         visibility full
         negateValues on
@@ -260,7 +260,7 @@ maxHeightPixels 60:60:60
         shortLabel GABA APC +
         longLabel GABAneurons RNAseq APC avg_cell plus
         subGroups view=RNA cell=GABA src=APC strand=plus
-        priority 1
+        priority 13
         color 0,158,115
         visibility full
         autoScale on
@@ -278,7 +278,7 @@ maxHeightPixels 60:60:60
         shortLabel GABA APC -
         longLabel GABAneurons RNAseq APC avg_cell minus
         subGroups view=RNA cell=GABA src=APC strand=minus
-        priority 2
+        priority 14
         color 0,158,115
         visibility full
         negateValues on
@@ -297,7 +297,7 @@ maxHeightPixels 60:60:60
         shortLabel GABA PW +
         longLabel GABAneurons RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=GABA src=PW strand=plus
-        priority 1
+        priority 15
         color 0,158,115
         visibility full
         autoScale on
@@ -315,7 +315,7 @@ maxHeightPixels 60:60:60
         shortLabel GABA PW -
         longLabel GABAneurons RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=GABA src=PW strand=minus
-        priority 2
+        priority 16
         color 0,158,115
         visibility full
         negateValues on
@@ -334,7 +334,7 @@ maxHeightPixels 60:60:60
         shortLabel Glu APC +
         longLabel Gluneurons RNAseq APC avg_cell plus
         subGroups view=RNA cell=Glu src=APC strand=plus
-        priority 1
+        priority 17
         color 0,114,178
         visibility full
         autoScale on
@@ -352,7 +352,7 @@ maxHeightPixels 60:60:60
         shortLabel Glu APC -
         longLabel Gluneurons RNAseq APC avg_cell minus
         subGroups view=RNA cell=Glu src=APC strand=minus
-        priority 2
+        priority 18
         color 0,114,178
         visibility full
         negateValues on
@@ -371,7 +371,7 @@ maxHeightPixels 60:60:60
         shortLabel Glu PW +
         longLabel Gluneurons RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Glu src=PW strand=plus
-        priority 1
+        priority 19
         color 0,114,178
         visibility full
         autoScale on
@@ -389,7 +389,7 @@ maxHeightPixels 60:60:60
         shortLabel Glu PW -
         longLabel Gluneurons RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Glu src=PW strand=minus
-        priority 2
+        priority 20
         color 0,114,178
         visibility full
         negateValues on
@@ -408,7 +408,7 @@ maxHeightPixels 60:60:60
         shortLabel Micro APC +
         longLabel Microglia RNAseq APC avg_cell plus
         subGroups view=RNA cell=Micro src=APC strand=plus
-        priority 1
+        priority 21
         color 213,94,0
         visibility full
         autoScale on
@@ -426,7 +426,7 @@ maxHeightPixels 60:60:60
         shortLabel Micro APC -
         longLabel Microglia RNAseq APC avg_cell minus
         subGroups view=RNA cell=Micro src=APC strand=minus
-        priority 2
+        priority 22
         color 213,94,0
         visibility full
         negateValues on
@@ -445,7 +445,7 @@ maxHeightPixels 60:60:60
         shortLabel Micro PW +
         longLabel Microglia RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Micro src=PW strand=plus
-        priority 1
+        priority 23
         color 213,94,0
         visibility full
         autoScale on
@@ -463,7 +463,7 @@ maxHeightPixels 60:60:60
         shortLabel Micro PW -
         longLabel Microglia RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Micro src=PW strand=minus
-        priority 2
+        priority 24
         color 213,94,0
         visibility full
         negateValues on
@@ -482,7 +482,7 @@ maxHeightPixels 60:60:60
         shortLabel Mono APC +
         longLabel Monocytes RNAseq APC avg_cell plus
         subGroups view=RNA cell=Mono src=APC strand=plus
-        priority 1
+        priority 25
         color 204,121,167
         visibility full
         autoScale on
@@ -500,7 +500,7 @@ maxHeightPixels 60:60:60
         shortLabel Mono APC -
         longLabel Monocytes RNAseq APC avg_cell minus
         subGroups view=RNA cell=Mono src=APC strand=minus
-        priority 2
+        priority 26
         color 204,121,167
         visibility full
         negateValues on
@@ -519,7 +519,7 @@ maxHeightPixels 60:60:60
         shortLabel Mono PW +
         longLabel Monocytes RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Mono src=PW strand=plus
-        priority 1
+        priority 27
         color 204,121,167
         visibility full
         autoScale on
@@ -537,7 +537,7 @@ maxHeightPixels 60:60:60
         shortLabel Mono PW -
         longLabel Monocytes RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Mono src=PW strand=minus
-        priority 2
+        priority 28
         color 204,121,167
         visibility full
         negateValues on
@@ -556,7 +556,7 @@ maxHeightPixels 60:60:60
         shortLabel Oligo APC +
         longLabel Oligodendrocytes RNAseq APC avg_cell plus
         subGroups view=RNA cell=Oligo src=APC strand=plus
-        priority 1
+        priority 29
         color 148,103,189
         visibility full
         autoScale on
@@ -574,7 +574,7 @@ maxHeightPixels 60:60:60
         shortLabel Oligo APC -
         longLabel Oligodendrocytes RNAseq APC avg_cell minus
         subGroups view=RNA cell=Oligo src=APC strand=minus
-        priority 2
+        priority 30
         color 148,103,189
         visibility full
         negateValues on
@@ -593,7 +593,7 @@ maxHeightPixels 60:60:60
         shortLabel Oligo PW +
         longLabel Oligodendrocytes RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Oligo src=PW strand=plus
-        priority 1
+        priority 31
         color 148,103,189
         visibility full
         autoScale on
@@ -611,7 +611,7 @@ maxHeightPixels 60:60:60
         shortLabel Oligo PW -
         longLabel Oligodendrocytes RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Oligo src=PW strand=minus
-        priority 2
+        priority 32
         color 148,103,189
         visibility full
         negateValues on
@@ -630,7 +630,7 @@ maxHeightPixels 60:60:60
         shortLabel OPC APC +
         longLabel OPCs RNAseq APC avg_cell plus
         subGroups view=RNA cell=OPC src=APC strand=plus
-        priority 1
+        priority 33
         color 100,100,100
         visibility full
         autoScale on
@@ -648,7 +648,7 @@ maxHeightPixels 60:60:60
         shortLabel OPC APC -
         longLabel OPCs RNAseq APC avg_cell minus
         subGroups view=RNA cell=OPC src=APC strand=minus
-        priority 2
+        priority 34
         color 100,100,100
         visibility full
         negateValues on
@@ -667,7 +667,7 @@ maxHeightPixels 60:60:60
         shortLabel OPC PW +
         longLabel OPCs RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=OPC src=PW strand=plus
-        priority 1
+        priority 35
         color 100,100,100
         visibility full
         autoScale on
@@ -685,7 +685,7 @@ maxHeightPixels 60:60:60
         shortLabel OPC PW -
         longLabel OPCs RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=OPC src=PW strand=minus
-        priority 2
+        priority 36
         color 100,100,100
         visibility full
         negateValues on
@@ -704,7 +704,7 @@ maxHeightPixels 60:60:60
         shortLabel Peri APC +
         longLabel Pericytes RNAseq APC avg_cell plus
         subGroups view=RNA cell=Peri src=APC strand=plus
-        priority 1
+        priority 37
         color 50,50,50
         visibility full
         autoScale on
@@ -722,7 +722,7 @@ maxHeightPixels 60:60:60
         shortLabel Peri APC -
         longLabel Pericytes RNAseq APC avg_cell minus
         subGroups view=RNA cell=Peri src=APC strand=minus
-        priority 2
+        priority 38
         color 50,50,50
         visibility full
         negateValues on
@@ -741,7 +741,7 @@ maxHeightPixels 60:60:60
         shortLabel Peri PW +
         longLabel Pericytes RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Peri src=PW strand=plus
-        priority 1
+        priority 39
         color 50,50,50
         visibility full
         autoScale on
@@ -759,7 +759,7 @@ maxHeightPixels 60:60:60
         shortLabel Peri PW -
         longLabel Pericytes RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Peri src=PW strand=minus
-        priority 2
+        priority 40
         color 50,50,50
         visibility full
         negateValues on
