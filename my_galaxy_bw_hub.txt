@@ -37,10 +37,9 @@ maxHeightPixels 60:60:60
         shortLabel Astro APC +
         longLabel Astrocytes RNAseq APC avg_cell plus
         subGroups view=RNA cell=Astro src=APC strand=plus
-        priority 1
         color 230,159,0
         visibility full
-        autoScale on
+        autoScale group
         graphTypeDefault bar
         maxHeightPixels 60:60:60
         windowingFunction mean+whiskers
@@ -59,7 +58,7 @@ maxHeightPixels 60:60:60
         color 230,159,0
         visibility full
         negateValues on
-        autoScale on
+        autoScale group
         graphTypeDefault bar
         maxHeightPixels 60:60:60
         windowingFunction mean+whiskers
