@@ -20,7 +20,7 @@ subGroup3 src Source APC=APC PW=PW
 subGroup4 strand Strand plus=Plus minus=Minus none=None
 dimensions dimX=view dimY=cell dimA=src dimB=strand
 sortOrder view=+ cell=+ src=+ strand=+
-maxHeightPixels 100:60:20
+maxHeightPixels 60:60:60
 
     track RNA_view
     parent APC_PW_multiome
@@ -28,7 +28,7 @@ maxHeightPixels 100:60:20
     longLabel RNA-seq signal tracks
     view RNA
     type bigWig
-    visibility dense
+    visibility full
     subGroups view=RNA
 
         track Astrocytes_RNAseq_APC_avg_cell_plus_bw
@@ -39,7 +39,14 @@ maxHeightPixels 100:60:20
         longLabel Astrocytes RNAseq APC avg_cell plus
         subGroups view=RNA cell=Astro src=APC strand=plus
         color 230,159,0
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Astrocytes_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -49,8 +56,15 @@ maxHeightPixels 100:60:20
         longLabel Astrocytes RNAseq APC avg_cell minus
         subGroups view=RNA cell=Astro src=APC strand=minus
         color 230,159,0
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Astrocytes_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -60,7 +74,14 @@ maxHeightPixels 100:60:20
         longLabel Astrocytes RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Astro src=PW strand=plus
         color 230,159,0
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Astrocytes_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -70,8 +91,15 @@ maxHeightPixels 100:60:20
         longLabel Astrocytes RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Astro src=PW strand=minus
         color 230,159,0
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track CD8TCells_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -81,7 +109,14 @@ maxHeightPixels 100:60:20
         longLabel CD8TCells RNAseq APC avg_cell plus
         subGroups view=RNA cell=CD8 src=APC strand=plus
         color 86,180,233
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track CD8TCells_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -91,8 +126,15 @@ maxHeightPixels 100:60:20
         longLabel CD8TCells RNAseq APC avg_cell minus
         subGroups view=RNA cell=CD8 src=APC strand=minus
         color 86,180,233
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track CD8TCells_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -102,7 +144,14 @@ maxHeightPixels 100:60:20
         longLabel CD8TCells RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=CD8 src=PW strand=plus
         color 86,180,233
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track CD8TCells_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -112,8 +161,15 @@ maxHeightPixels 100:60:20
         longLabel CD8TCells RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=CD8 src=PW strand=minus
         color 86,180,233
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Endothelialcell_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -123,7 +179,14 @@ maxHeightPixels 100:60:20
         longLabel Endothelialcell RNAseq APC avg_cell plus
         subGroups view=RNA cell=Endo src=APC strand=plus
         color 240,228,66
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Endothelialcell_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -133,8 +196,15 @@ maxHeightPixels 100:60:20
         longLabel Endothelialcell RNAseq APC avg_cell minus
         subGroups view=RNA cell=Endo src=APC strand=minus
         color 240,228,66
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Endothelialcell_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -144,7 +214,14 @@ maxHeightPixels 100:60:20
         longLabel Endothelialcell RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Endo src=PW strand=plus
         color 240,228,66
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Endothelialcell_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -154,8 +231,15 @@ maxHeightPixels 100:60:20
         longLabel Endothelialcell RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Endo src=PW strand=minus
         color 240,228,66
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track GABAneurons_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -165,7 +249,14 @@ maxHeightPixels 100:60:20
         longLabel GABAneurons RNAseq APC avg_cell plus
         subGroups view=RNA cell=GABA src=APC strand=plus
         color 0,158,115
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track GABAneurons_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -175,8 +266,15 @@ maxHeightPixels 100:60:20
         longLabel GABAneurons RNAseq APC avg_cell minus
         subGroups view=RNA cell=GABA src=APC strand=minus
         color 0,158,115
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track GABAneurons_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -186,7 +284,14 @@ maxHeightPixels 100:60:20
         longLabel GABAneurons RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=GABA src=PW strand=plus
         color 0,158,115
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track GABAneurons_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -196,8 +301,15 @@ maxHeightPixels 100:60:20
         longLabel GABAneurons RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=GABA src=PW strand=minus
         color 0,158,115
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Gluneurons_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -207,7 +319,14 @@ maxHeightPixels 100:60:20
         longLabel Gluneurons RNAseq APC avg_cell plus
         subGroups view=RNA cell=Glu src=APC strand=plus
         color 0,114,178
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Gluneurons_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -217,8 +336,15 @@ maxHeightPixels 100:60:20
         longLabel Gluneurons RNAseq APC avg_cell minus
         subGroups view=RNA cell=Glu src=APC strand=minus
         color 0,114,178
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Gluneurons_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -228,7 +354,14 @@ maxHeightPixels 100:60:20
         longLabel Gluneurons RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Glu src=PW strand=plus
         color 0,114,178
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Gluneurons_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -238,8 +371,15 @@ maxHeightPixels 100:60:20
         longLabel Gluneurons RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Glu src=PW strand=minus
         color 0,114,178
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Microglia_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -249,7 +389,14 @@ maxHeightPixels 100:60:20
         longLabel Microglia RNAseq APC avg_cell plus
         subGroups view=RNA cell=Micro src=APC strand=plus
         color 213,94,0
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Microglia_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -259,8 +406,15 @@ maxHeightPixels 100:60:20
         longLabel Microglia RNAseq APC avg_cell minus
         subGroups view=RNA cell=Micro src=APC strand=minus
         color 213,94,0
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Microglia_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -270,7 +424,14 @@ maxHeightPixels 100:60:20
         longLabel Microglia RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Micro src=PW strand=plus
         color 213,94,0
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Microglia_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -280,8 +441,15 @@ maxHeightPixels 100:60:20
         longLabel Microglia RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Micro src=PW strand=minus
         color 213,94,0
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Monocytes_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -291,7 +459,14 @@ maxHeightPixels 100:60:20
         longLabel Monocytes RNAseq APC avg_cell plus
         subGroups view=RNA cell=Mono src=APC strand=plus
         color 204,121,167
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Monocytes_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -301,8 +476,15 @@ maxHeightPixels 100:60:20
         longLabel Monocytes RNAseq APC avg_cell minus
         subGroups view=RNA cell=Mono src=APC strand=minus
         color 204,121,167
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Monocytes_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -312,7 +494,14 @@ maxHeightPixels 100:60:20
         longLabel Monocytes RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Mono src=PW strand=plus
         color 204,121,167
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Monocytes_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -322,8 +511,15 @@ maxHeightPixels 100:60:20
         longLabel Monocytes RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Mono src=PW strand=minus
         color 204,121,167
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Oligodendrocytes_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -333,7 +529,14 @@ maxHeightPixels 100:60:20
         longLabel Oligodendrocytes RNAseq APC avg_cell plus
         subGroups view=RNA cell=Oligo src=APC strand=plus
         color 148,103,189
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Oligodendrocytes_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -343,8 +546,15 @@ maxHeightPixels 100:60:20
         longLabel Oligodendrocytes RNAseq APC avg_cell minus
         subGroups view=RNA cell=Oligo src=APC strand=minus
         color 148,103,189
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Oligodendrocytes_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -354,7 +564,14 @@ maxHeightPixels 100:60:20
         longLabel Oligodendrocytes RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Oligo src=PW strand=plus
         color 148,103,189
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Oligodendrocytes_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -364,8 +581,15 @@ maxHeightPixels 100:60:20
         longLabel Oligodendrocytes RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Oligo src=PW strand=minus
         color 148,103,189
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track OPCs_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -375,7 +599,14 @@ maxHeightPixels 100:60:20
         longLabel OPCs RNAseq APC avg_cell plus
         subGroups view=RNA cell=OPC src=APC strand=plus
         color 100,100,100
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track OPCs_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -385,8 +616,15 @@ maxHeightPixels 100:60:20
         longLabel OPCs RNAseq APC avg_cell minus
         subGroups view=RNA cell=OPC src=APC strand=minus
         color 100,100,100
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track OPCs_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -396,7 +634,14 @@ maxHeightPixels 100:60:20
         longLabel OPCs RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=OPC src=PW strand=plus
         color 100,100,100
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track OPCs_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -406,8 +651,15 @@ maxHeightPixels 100:60:20
         longLabel OPCs RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=OPC src=PW strand=minus
         color 100,100,100
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Pericytes_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -417,7 +669,14 @@ maxHeightPixels 100:60:20
         longLabel Pericytes RNAseq APC avg_cell plus
         subGroups view=RNA cell=Peri src=APC strand=plus
         color 50,50,50
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Pericytes_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -427,8 +686,15 @@ maxHeightPixels 100:60:20
         longLabel Pericytes RNAseq APC avg_cell minus
         subGroups view=RNA cell=Peri src=APC strand=minus
         color 50,50,50
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Pericytes_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -438,7 +704,14 @@ maxHeightPixels 100:60:20
         longLabel Pericytes RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Peri src=PW strand=plus
         color 50,50,50
+        visibility full
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
         track Pericytes_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -448,8 +721,15 @@ maxHeightPixels 100:60:20
         longLabel Pericytes RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Peri src=PW strand=minus
         color 50,50,50
+        visibility full
         negateValues on
         autoScale on
+        graphTypeDefault bar
+        maxHeightPixels 60:60:60
+        windowingFunction mean+whiskers
+        smoothingWindow off
+        yLineMark 0
+        yLineOnOff on
 
     track ATAC_view
     parent APC_PW_multiome
