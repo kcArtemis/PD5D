@@ -39,12 +39,7 @@ maxHeightPixels 100:60:20
         longLabel Astrocytes RNAseq APC avg_cell plus
         subGroups view=RNA cell=Astro src=APC strand=plus
         color 230,159,0
-        altColor 230,159,0
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Astrocytes_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -54,13 +49,8 @@ maxHeightPixels 100:60:20
         longLabel Astrocytes RNAseq APC avg_cell minus
         subGroups view=RNA cell=Astro src=APC strand=minus
         color 230,159,0
-        altColor 230,159,0
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Astrocytes_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -70,12 +60,7 @@ maxHeightPixels 100:60:20
         longLabel Astrocytes RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Astro src=PW strand=plus
         color 230,159,0
-        altColor 230,159,0
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Astrocytes_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -85,13 +70,8 @@ maxHeightPixels 100:60:20
         longLabel Astrocytes RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Astro src=PW strand=minus
         color 230,159,0
-        altColor 230,159,0
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track CD8TCells_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -101,12 +81,7 @@ maxHeightPixels 100:60:20
         longLabel CD8TCells RNAseq APC avg_cell plus
         subGroups view=RNA cell=CD8 src=APC strand=plus
         color 86,180,233
-        altColor 86,180,233
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track CD8TCells_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -116,13 +91,8 @@ maxHeightPixels 100:60:20
         longLabel CD8TCells RNAseq APC avg_cell minus
         subGroups view=RNA cell=CD8 src=APC strand=minus
         color 86,180,233
-        altColor 86,180,233
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track CD8TCells_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -132,12 +102,7 @@ maxHeightPixels 100:60:20
         longLabel CD8TCells RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=CD8 src=PW strand=plus
         color 86,180,233
-        altColor 86,180,233
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track CD8TCells_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -147,13 +112,8 @@ maxHeightPixels 100:60:20
         longLabel CD8TCells RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=CD8 src=PW strand=minus
         color 86,180,233
-        altColor 86,180,233
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Endothelialcell_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -163,12 +123,7 @@ maxHeightPixels 100:60:20
         longLabel Endothelialcell RNAseq APC avg_cell plus
         subGroups view=RNA cell=Endo src=APC strand=plus
         color 240,228,66
-        altColor 240,228,66
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Endothelialcell_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -178,13 +133,8 @@ maxHeightPixels 100:60:20
         longLabel Endothelialcell RNAseq APC avg_cell minus
         subGroups view=RNA cell=Endo src=APC strand=minus
         color 240,228,66
-        altColor 240,228,66
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Endothelialcell_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -194,12 +144,7 @@ maxHeightPixels 100:60:20
         longLabel Endothelialcell RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Endo src=PW strand=plus
         color 240,228,66
-        altColor 240,228,66
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Endothelialcell_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -209,13 +154,8 @@ maxHeightPixels 100:60:20
         longLabel Endothelialcell RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Endo src=PW strand=minus
         color 240,228,66
-        altColor 240,228,66
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track GABAneurons_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -225,12 +165,7 @@ maxHeightPixels 100:60:20
         longLabel GABAneurons RNAseq APC avg_cell plus
         subGroups view=RNA cell=GABA src=APC strand=plus
         color 0,158,115
-        altColor 0,158,115
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track GABAneurons_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -240,13 +175,8 @@ maxHeightPixels 100:60:20
         longLabel GABAneurons RNAseq APC avg_cell minus
         subGroups view=RNA cell=GABA src=APC strand=minus
         color 0,158,115
-        altColor 0,158,115
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track GABAneurons_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -256,12 +186,7 @@ maxHeightPixels 100:60:20
         longLabel GABAneurons RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=GABA src=PW strand=plus
         color 0,158,115
-        altColor 0,158,115
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track GABAneurons_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -271,13 +196,8 @@ maxHeightPixels 100:60:20
         longLabel GABAneurons RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=GABA src=PW strand=minus
         color 0,158,115
-        altColor 0,158,115
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Gluneurons_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -287,12 +207,7 @@ maxHeightPixels 100:60:20
         longLabel Gluneurons RNAseq APC avg_cell plus
         subGroups view=RNA cell=Glu src=APC strand=plus
         color 0,114,178
-        altColor 0,114,178
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Gluneurons_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -302,13 +217,8 @@ maxHeightPixels 100:60:20
         longLabel Gluneurons RNAseq APC avg_cell minus
         subGroups view=RNA cell=Glu src=APC strand=minus
         color 0,114,178
-        altColor 0,114,178
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Gluneurons_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -318,12 +228,7 @@ maxHeightPixels 100:60:20
         longLabel Gluneurons RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Glu src=PW strand=plus
         color 0,114,178
-        altColor 0,114,178
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Gluneurons_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -333,13 +238,8 @@ maxHeightPixels 100:60:20
         longLabel Gluneurons RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Glu src=PW strand=minus
         color 0,114,178
-        altColor 0,114,178
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Microglia_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -349,12 +249,7 @@ maxHeightPixels 100:60:20
         longLabel Microglia RNAseq APC avg_cell plus
         subGroups view=RNA cell=Micro src=APC strand=plus
         color 213,94,0
-        altColor 213,94,0
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Microglia_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -364,13 +259,8 @@ maxHeightPixels 100:60:20
         longLabel Microglia RNAseq APC avg_cell minus
         subGroups view=RNA cell=Micro src=APC strand=minus
         color 213,94,0
-        altColor 213,94,0
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Microglia_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -380,12 +270,7 @@ maxHeightPixels 100:60:20
         longLabel Microglia RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Micro src=PW strand=plus
         color 213,94,0
-        altColor 213,94,0
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Microglia_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -395,13 +280,8 @@ maxHeightPixels 100:60:20
         longLabel Microglia RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Micro src=PW strand=minus
         color 213,94,0
-        altColor 213,94,0
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Monocytes_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -411,12 +291,7 @@ maxHeightPixels 100:60:20
         longLabel Monocytes RNAseq APC avg_cell plus
         subGroups view=RNA cell=Mono src=APC strand=plus
         color 204,121,167
-        altColor 204,121,167
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Monocytes_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -426,13 +301,8 @@ maxHeightPixels 100:60:20
         longLabel Monocytes RNAseq APC avg_cell minus
         subGroups view=RNA cell=Mono src=APC strand=minus
         color 204,121,167
-        altColor 204,121,167
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Monocytes_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -442,12 +312,7 @@ maxHeightPixels 100:60:20
         longLabel Monocytes RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Mono src=PW strand=plus
         color 204,121,167
-        altColor 204,121,167
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Monocytes_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -457,13 +322,8 @@ maxHeightPixels 100:60:20
         longLabel Monocytes RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Mono src=PW strand=minus
         color 204,121,167
-        altColor 204,121,167
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Oligodendrocytes_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -473,12 +333,7 @@ maxHeightPixels 100:60:20
         longLabel Oligodendrocytes RNAseq APC avg_cell plus
         subGroups view=RNA cell=Oligo src=APC strand=plus
         color 148,103,189
-        altColor 148,103,189
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Oligodendrocytes_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -488,13 +343,8 @@ maxHeightPixels 100:60:20
         longLabel Oligodendrocytes RNAseq APC avg_cell minus
         subGroups view=RNA cell=Oligo src=APC strand=minus
         color 148,103,189
-        altColor 148,103,189
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Oligodendrocytes_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -504,12 +354,7 @@ maxHeightPixels 100:60:20
         longLabel Oligodendrocytes RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Oligo src=PW strand=plus
         color 148,103,189
-        altColor 148,103,189
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Oligodendrocytes_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -519,13 +364,8 @@ maxHeightPixels 100:60:20
         longLabel Oligodendrocytes RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Oligo src=PW strand=minus
         color 148,103,189
-        altColor 148,103,189
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track OPCs_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -535,12 +375,7 @@ maxHeightPixels 100:60:20
         longLabel OPCs RNAseq APC avg_cell plus
         subGroups view=RNA cell=OPC src=APC strand=plus
         color 100,100,100
-        altColor 100,100,100
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track OPCs_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -550,13 +385,8 @@ maxHeightPixels 100:60:20
         longLabel OPCs RNAseq APC avg_cell minus
         subGroups view=RNA cell=OPC src=APC strand=minus
         color 100,100,100
-        altColor 100,100,100
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track OPCs_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -566,12 +396,7 @@ maxHeightPixels 100:60:20
         longLabel OPCs RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=OPC src=PW strand=plus
         color 100,100,100
-        altColor 100,100,100
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track OPCs_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -581,13 +406,8 @@ maxHeightPixels 100:60:20
         longLabel OPCs RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=OPC src=PW strand=minus
         color 100,100,100
-        altColor 100,100,100
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Pericytes_RNAseq_APC_avg_cell_plus_bw
         parent RNA_view
@@ -597,12 +417,7 @@ maxHeightPixels 100:60:20
         longLabel Pericytes RNAseq APC avg_cell plus
         subGroups view=RNA cell=Peri src=APC strand=plus
         color 50,50,50
-        altColor 50,50,50
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Pericytes_RNAseq_APC_avg_cell_minus_bw
         parent RNA_view
@@ -612,13 +427,8 @@ maxHeightPixels 100:60:20
         longLabel Pericytes RNAseq APC avg_cell minus
         subGroups view=RNA cell=Peri src=APC strand=minus
         color 50,50,50
-        altColor 50,50,50
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Pericytes_RNAseq_PW_mean_by_donor_plus_bw
         parent RNA_view
@@ -628,12 +438,7 @@ maxHeightPixels 100:60:20
         longLabel Pericytes RNAseq PW mean_by_donor plus
         subGroups view=RNA cell=Peri src=PW strand=plus
         color 50,50,50
-        altColor 50,50,50
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
         track Pericytes_RNAseq_PW_mean_by_donor_minus_bw
         parent RNA_view
@@ -643,13 +448,8 @@ maxHeightPixels 100:60:20
         longLabel Pericytes RNAseq PW mean_by_donor minus
         subGroups view=RNA cell=Peri src=PW strand=minus
         color 50,50,50
-        altColor 50,50,50
         negateValues on
-        autoScale off
-        viewLimits -20:20
-        alwaysZero on
-        yLineOnOff on
-        yLineMark 0
+        autoScale on
 
     track ATAC_view
     parent APC_PW_multiome
